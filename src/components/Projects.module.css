@@ -1,0 +1,56 @@
+@import '../index.css';
+
+/* Media Query for phone*/
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+    width: 100%;
+    scroll-margin-top: 110px;
+}
+
+.titleSection {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.titleSection h1 {
+    font-size: 20px;
+}
+
+.border {
+    background: linear-gradient(to right, grey, 20%, transparent);
+    width: 60%;
+    height: 3px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media(min-width: 768px) {
+    .container {
+        scroll-margin-top: 70px;
+    }
+}
+
+@media(min-width: 1024px) {
+    .container {
+        padding-left: 4rem;
+    }
+
+    .border {
+        background: linear-gradient(to right, grey, 40%, transparent);
+        width: 100%;
+    }
+
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}

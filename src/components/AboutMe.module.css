@@ -1,0 +1,177 @@
+@import '../index.css';
+
+/* Media Query for phone*/
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 3rem;
+    scroll-margin-top: 120px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+.status {
+    margin: 2rem;
+    width: 40%;
+    font-size: 15px;
+    border: var(--border);
+    padding: 10px;
+    color: var(--text-secondary);
+    background-color: var(--bg-transparente);
+}
+
+.content h1:nth-child(2) {
+    font-size: 60px;
+    text-shadow: 5px 5px 50px var(--shadow);
+    color: var(--text-title);
+}
+
+.content h1:nth-child(3) {
+    font-size: 60px;
+    text-shadow: 5px 5px 100px var(--shadow);
+    color: var(--text-secondary);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 3rem;
+}
+
+.image {
+    width: 300px;
+    height: 300px;
+    border: var(--border);
+    position: relative;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.image .id {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-secondary);
+}
+
+.aboutMe {
+    width: 90%;
+}
+
+.aboutMe p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btnStartJob {
+    font-size: 15px;
+    font-weight: bold;
+    width: 80%;
+    border: none;
+    background-color: var(--bg-btn-primary);
+    box-shadow: 0 0 40px var(--shadow);
+}
+
+.btnStartJob:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--shadow, 1);
+    transition: transform 0.2s ease;
+}
+
+.btnCv {
+    background-color: transparent;
+    border: 1px solid var(--bg-border);
+    padding: .5rem;
+}
+
+.btnCv:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+}
+
+svg {
+    width: 25px;
+    height: 25px;
+    color: var(--text-btn-secondary);
+}
+
+@media (min-width: 768px) {
+    .btnStartJob {
+        font-size: 20px;
+        width: 40%;
+    }
+}
+
+@media(min-width: 1024px) {
+    .content {
+        width: 90%;
+    }
+
+    .status {
+        width: 20%;
+    }
+
+    .content h1:nth-child(2) {
+        font-size: 100px;
+    }
+
+    .content h1:nth-child(3) {
+        font-size: 100px;
+    }
+
+    .info {
+        flex-direction: row;
+    }
+
+    .aboutMe {
+        width: 60%;
+    }
+
+    .actions {
+        justify-content: start;
+    }
+}
+
+@media(min-width: 1440px) {
+    .image {
+        width: 25%;
+        height: 25%;
+        padding: 10px;
+    }
+
+    .btnStartJob {
+        font-size: 20px;
+        width: 30%;
+    }
+
+}

@@ -1,0 +1,137 @@
+@import '../index.css';
+
+/* Media Query for phone */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    background-color: #0e0e10;
+    padding: 2rem;
+    color: white;
+    scroll-margin-top: 110px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    /* width: 100%; */
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: .5rem;
+    width: 70%;
+    background-color: #2a2a2c;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    background-color: #00f2ff;
+    border: 1px solid #00f2ff;
+    box-shadow: inset 0 0 5px #00f2ff,
+        0 0 15px #00f2ff;
+    border-radius: 100%;
+}
+
+.skills {
+    display: flex;
+    width: 100%;
+    background-color: var(--bg-card-project);
+    flex-direction: column;
+    padding: 3rem 2rem;
+    gap: 1.5rem;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.skillInfo {
+    display: flex;
+    font-size: 15px;
+    gap: 1rem;
+}
+
+.skillInfo svg {
+    width: 25px;
+    height: 25px;
+}
+
+.value {
+    margin-left: auto;
+}
+
+.rod {
+    width: 100%;
+    height: 4px;
+    background-color: grey;
+}
+
+.rod div {
+    height: 100%;
+}
+
+.rodReact {
+    width: 70%;
+    background: linear-gradient(90deg, #00f2ff, #00bcd4);
+    box-shadow: 0 0 10px #00f2ff;
+}
+
+.rodTs {
+    width: 60%;
+    background: linear-gradient(90deg, #3179c7, #2863a1);
+    box-shadow: 0 0 10px #3179c7;
+}
+
+.rodZustand {
+    width: 50%;
+    background: linear-gradient(90deg, #ffe600, #ffe600);
+    box-shadow: 0 0 10px #ffe600;
+}
+
+.rodApi {
+    width: 60%;
+    background: linear-gradient(90deg, #00ff00, #00cf00);
+    box-shadow: 0 0 10px #00ff00;
+}
+
+@media(min-width: 768px) {
+    .container {
+        height: 17%;
+        align-items: center;
+        justify-content: center;
+        scroll-margin-top: 70px;
+    }
+
+    .label {
+        width: 35%;
+    }
+
+}
+
+@media(min-width: 1024px) {
+    .label {
+        width: 25%;
+    }
+}
+
+@media(min-width: 1440px) {
+    .container {
+        flex-direction: row;
+        padding: 5rem;
+    }
+
+    .skills {
+        justify-content: center;
+        gap: 2rem;
+        height: 80%;
+    }
+}

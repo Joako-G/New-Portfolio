@@ -1,0 +1,25 @@
+{
+    "stats": [
+        {
+            "id": 1,
+            "title": "PROYECTOS_TERMINADOS",
+            "value": "4+",
+            "label": "PROYECTOS",
+            "description": "He completado exitosamente varios proyectos, demostrando mi capacidad para llevar a cabo tareas y alcanzar objetivos."
+        },
+        {
+            "id": 2,
+            "title": "NIVEL_DE_EXPERIENCIA",
+            "value": "1+",
+            "label": "AÑOS",
+            "description": "Llevo un año trabajando en el desarrollo de aplicaciones web en proyectos personales, lo que me ha permitido adquirir habilidades prácticas y conocimientos en el campo."
+        },
+        {
+            "id": 3,
+            "title": "MANEJO_DE_ESTADOS",
+            "value": "ESTADO",
+            "label": "GLOBAL",
+            "description": "Estoy enfocando en mejorar mis habilidades de manejo de estados globales y sincronizaciones para brindar una mejor experiencia al usuario."
+        }
+    ]
+}

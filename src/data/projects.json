@@ -1,0 +1,34 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "image": "dbz-api.png",
+            "title": "DRAGON_BALL_Z_WIKI",
+            "description": "Aplicación web desarrollada para dar información detallada sobre los personajes de la popular serie de anime. Incluye funcionalidades de busqueda y filtros en tiempo real para proporcionar una experiencia interactiva y visualmente atractiva para los fanáticos de la serie. Construida con React, TypeScript y consumo de API, enfocada en la gestion de estado y renderizado eficinete de dato.",
+            "stacks": [
+                "REACT",
+                "CSS",
+                "HTML",
+                "TYPESCRIPT"
+            ],
+            "status": "Complete",
+            "gitUrl": "https://github.com/Joako-G/DBz-API",
+            "webUrl": "https://d-bz-api.vercel.app/"
+        },
+        {
+            "id": 2,
+            "image": "pokemonGame.png",
+            "title": "POKEMON_GAME",
+            "description": "Juego interactivo inspirado en el popular juego 'Preguntados' donde el usuario debera adivinar el nombre del Pokémon mostrado en pantalla. Incluye lógia de validación de respuestas y dinámica de juego. Diseñada para ofrecer una experiencia simple y entretenida ",
+            "stacks": [
+                "REACT",
+                "CSS",
+                "HTML",
+                "JAVASCRIPT"
+            ],
+            "status": "Complete",
+            "gitUrl": "https://github.com/Joako-G/pokemonGame",
+            "webUrl": "https://joako-g.github.io/pokemonGame/"
+        }
+    ]
+}

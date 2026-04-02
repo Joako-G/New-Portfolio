@@ -1,0 +1,49 @@
+@import '../index.css';
+
+/* Media Query for phone*/
+.container {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 0;
+    background-color: #1c1b1d;
+    scroll-margin-top: 110px;
+}
+
+.containerCard {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 4rem;
+}
+
+@media(min-width: 768px) {
+    .container {
+        scroll-margin-top: 70px;
+    }
+}
+
+@media(min-width: 1024px) {
+    .containerCard {
+        justify-content: end;
+        width: 90%;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+}
+
+/*******************/
+
+/* .container {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-left: auto;
+    padding: 3rem 2rem;
+    background-color: #1c1b1d;
+}
+ */

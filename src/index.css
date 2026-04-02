@@ -1,0 +1,53 @@
+:root {
+  --bg-body: black;
+  --bg-header: #101013;
+  --bg-secondary: #00A0A9;
+  --bg-transparente: #00a1a91a;
+  --bg-sidebar: #201A1A;
+  --bg-content: #000000;
+  --bg-hover: #000000;
+  --bg-border: #ff007f;
+  --bg-btn-primary: #00f2ff;
+  --bg-card: #353437;
+  --bg-card-project: #1c1b1d;
+
+  --text-title: #ffffff;
+  --text-primary: #655C5C;
+  --text-secondary: #00A0A9;
+  --text-hover: #00A0A9;
+  --text-btn-secondary: #ff007f;
+
+  --shadow-hover: #00A0A9;
+  --shadow: #00f2ff;
+
+  --border: 1px solid var(--bg-secondary);
+  --border-link: #00A0A9;
+  --bg-span: #353437;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 400;
+  background-color: var(--bg-content);
+  background-image: repeating-linear-gradient(to bottom,
+      #1f1f1f 0px,
+      #1f1f1f 1px,
+      transparent 2px,
+      transparent 4px);
+}
+
+@supports (font-variation-settings: normal) {
+  body {
+    font-family: 'Space Grotesk';
+    font-variation-settings: 'wght' 600;
+    /* Usa el valor variable */
+  }
+}

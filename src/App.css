@@ -1,0 +1,33 @@
+.main {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.sidebar {
+    width: 10%;
+}
+
+.content {
+    width: 90%;
+}
+
+@media(min-width: 1024px) {
+    .sidebar {
+        width: 5%;
+    }
+
+    .content {
+        width: 95%;
+    }
+}
+
+@media(min-width: 1440px) {
+    .sidebar{
+        width: 3%;
+    }
+
+    .content {
+        width: 97%;
+    }
+}
