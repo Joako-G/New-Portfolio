@@ -10,10 +10,12 @@ import { Projects } from './components/Projects'
 import type { IProject } from './interfaces/IProject'
 import { Skills } from './components/Skills'
 import { Contact } from './components/Contact'
+import emailjs from '@emailjs/browser'
 
 function App() {
   const stats = data.stats as IStat[]
   const projects = dataProjects.projects as IProject[]
+  emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
 
   return (
     <>
