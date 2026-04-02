@@ -41,7 +41,7 @@
 
 @media(min-width: 1024px) {
     .container {
-        padding-left: 4rem;
+        padding-left: 3rem;
     }
 
     .border {
@@ -50,7 +50,14 @@
     }
 
     .cards {
+        justify-content: start;
         flex-direction: row;
         flex-wrap: wrap;
+    }
+}
+
+@media(min-width: 1440px) {
+    .cards {
+        justify-content: start;
     }
 }

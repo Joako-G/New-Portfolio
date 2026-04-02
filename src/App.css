@@ -5,11 +5,11 @@
 }
 
 .sidebar {
-    width: 10%;
+    width: 0%;
 }
 
 .content {
-    width: 90%;
+    width: 100%;
 }
 
 @media(min-width: 1024px) {

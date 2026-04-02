@@ -22,7 +22,7 @@
 
 .status {
     margin: 2rem;
-    width: 40%;
+    width: 30%;
     font-size: 15px;
     border: var(--border);
     padding: 10px;
@@ -69,7 +69,7 @@
     position: absolute;
     bottom: 0;
     top: 0;
-    padding: 20px;
+    padding: 25px;
     font-size: 20px;
     font-weight: bold;
     color: var(--text-secondary);
@@ -94,7 +94,7 @@
 .btnStartJob {
     font-size: 15px;
     font-weight: bold;
-    width: 80%;
+    width: 50%;
     border: none;
     background-color: var(--bg-btn-primary);
     box-shadow: 0 0 40px var(--shadow);
@@ -163,15 +163,37 @@ svg {
 }
 
 @media(min-width: 1440px) {
+    .status {
+        width: 10%;
+        margin: 1.5rem;
+    }
+
+    .content h1:nth-child(2) {
+        font-size: 130px;
+    }
+
+    .content h1:nth-child(3) {
+        font-size: 130px;
+    }
+
+    .info {
+        margin-top: 1.5rem;
+        width: 80%;
+    }
+
+    .info .aboutMe {
+        width: 40%;
+    }
+
     .image {
-        width: 25%;
-        height: 25%;
+        width: 30%;
+        height: 30%;
         padding: 10px;
     }
 
     .btnStartJob {
         font-size: 20px;
-        width: 30%;
+        width: 40%;
     }
 
 }

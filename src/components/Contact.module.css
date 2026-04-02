@@ -2,7 +2,7 @@
     display: flex;
     width: 100%;
     background-color: #131315;
-    height: 20%;
+    height: 17%;
     padding-top: 2rem;
     scroll-margin-top: 110px;
 }
@@ -122,92 +122,3 @@ form .btnSend {
         width: 70%;
     }
 }
-
-/*
-.console {
-    width: 60%;
-    height: 80%;
-    margin: auto;
-    background-color: #2a2a2c;
-}
-
-.rodTop {
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-    margin-left: .5rem;
-    padding: 20px 0;
-    height: 30px;
-
-    .title {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-    }
-
-    .circle {
-        height: 15px;
-        width: 15px;
-        border-radius: 50%;
-        background-color: #956f6c;
-    }
-
-
-}
-
-.circle:nth-child(2) {
-    background-color: #953a5d;
-}
-
-.circle:nth-child(3) {
-    background-color: #2f931d;
-}
-
-
-form {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    gap: 1rem;
-    background-color: #1c1b1d;
-    color: white;
-    height: 100%;
-
-    .title {
-        margin-bottom: 2rem;
-    }
-
-    input {
-        color: white;
-        padding: 1rem;
-        background-color: transparent;
-        border: 2px solid #272c2e;
-        height: 40px;
-        margin-bottom: 2rem;
-    }
-
-    textarea {
-        color: white;
-        background-color: transparent;
-        border: 2px solid #272c2e;
-        padding: .5rem;
-        height: 150px;
-    }
-
-    .btnSend {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: .5rem;
-        background-color: #34fc0d;
-        height: 50px;
-        border: none;
-        font-size: 20px;
-
-        svg {
-            width: 20px;
-            height: 20px;
-        }
-    }
-}
-*/

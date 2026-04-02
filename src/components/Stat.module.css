@@ -8,7 +8,7 @@
     gap: 2rem;
     padding: 2rem;
     background-color: var(--bg-card);
-    color: white;
+    color: grey;
 }
 
 .card1 {
@@ -44,9 +44,13 @@
     font-size: 2.5rem;
 }
 
+.card p {
+    color: white;
+}
+
 @media(min-width: 1024px) {
     .card {
-        max-width: 405px;
+        max-width: 400px;
     }
 }
 
