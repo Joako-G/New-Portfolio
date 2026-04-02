@@ -11,10 +11,14 @@ export function Header() {
             sections.forEach((section) => {
                 const rect = section.getBoundingClientRect()
                 if (rect.top >= 0 && rect.top < 300) {
+                    // console.log(section.id)
                     setActive(section.id)
                 }
             })
         }
+
+        // console.log('Active: ', active)
+        // window.history.replaceState(null, '', active)
 
         window.addEventListener('scroll', handleScroll)
 

@@ -79,6 +79,13 @@ form .btnSend {
     font-size: 15px;
 }
 
+.btnSend:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: transform 0.2s ease;
+
+}
+
 .btnSend svg {
     width: 25px;
     height: 25px;

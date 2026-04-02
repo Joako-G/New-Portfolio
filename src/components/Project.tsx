@@ -12,7 +12,7 @@ export function Project({ project }: ProjectProps) {
 
     return (
         <div className={styles.card}>
-            <img src={`/src/assets/${image}`} alt={title} />
+            <img src={`/images/${image}`} alt={title} />
             <span className={styles.status}> {status.toUpperCase()} </span>
             <div className={styles.infoCard}>
                 <div className={styles.header}>
