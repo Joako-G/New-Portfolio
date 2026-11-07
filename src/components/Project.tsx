@@ -11,38 +11,32 @@ export function Project({ project }: ProjectProps) {
     const { title, description, stacks, status, gitUrl, webUrl, image } = project
 
     return (
-        <div className={styles.card}>
-            <img src={`/images/${image}`} alt={title} />
-            <span className={styles.status}> {status.toUpperCase()} </span>
+        <article className={styles.card}>
+            <div className={styles.media}>
+                <img src={`/images/${image}`} alt={title} loading="lazy" />
+                <span className={styles.status}>{status.toUpperCase()}</span>
+            </div>
             <div className={styles.infoCard}>
-                <div className={styles.header}>
-                    <h1> {title} </h1>
-                </div>
-                <div className={styles.body}>
-                    <p> {description} </p>
-                    <div className={styles.technologies}>
-                        {
-                            stacks.map((stack) => (
-                                <span> {stack} </span>
-                            ))
-                        }
-                    </div>
-                </div>
+                <h3 className={styles.title}>{title}</h3>
+                <p className={styles.description}>{description}</p>
+                <ul className={styles.technologies}>
+                    {
+                        stacks.map((stack) => (
+                            <li key={stack}>{stack}</li>
+                        ))
+                    }
+                </ul>
                 <div className={styles.footer}>
-                    <div className={styles.border} />
-                    <div className={styles.links}>
-                        <a href={gitUrl}>
-                            <CodeSvg />
-                            <p>View Code</p>
-                        </a>
-                        <a href={webUrl}>
-                            <OpenInNewSvg />
-                            <p>Aplicacion Web</p>
-                        </a>
-                    </div>
+                    <a href={gitUrl} target="_blank" rel="noopener noreferrer">
+                        <CodeSvg />
+                        <span>View Code</span>
+                    </a>
+                    <a href={webUrl} target="_blank" rel="noopener noreferrer">
+                        <OpenInNewSvg />
+                        <span>Live Demo</span>
+                    </a>
                 </div>
             </div>
-
-        </div>
+        </article>
     )
 }

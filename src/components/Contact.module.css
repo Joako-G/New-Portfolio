@@ -1,30 +1,30 @@
+/* Mobile first */
 .container {
-    display: flex;
     width: 100%;
-    background-color: #131315;
-    height: 17%;
-    padding-top: 2rem;
-    scroll-margin-top: 110px;
+    padding: var(--space-5) var(--space-2);
+    background-color: var(--bg-section-alt);
 }
 
 .console {
-    width: 80%;
-    margin: auto;
-    background-color: #2a2a2c;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--bg-panel);
+    border: var(--border-subtle);
+    box-shadow: 0 20px 50px -20px rgba(0, 160, 169, 0.35);
 }
 
 .rodTop {
+    position: relative;
     display: flex;
     align-items: center;
-    gap: .5rem;
-    margin-left: .5rem;
-    padding: 20px 0;
-    height: 30px;
+    gap: var(--space-1);
+    padding: var(--space-2);
 }
 
 .circle {
-    height: 15px;
-    width: 15px;
+    width: 13px;
+    height: 13px;
     border-radius: 50%;
     background-color: #956f6c;
 }
@@ -37,95 +37,144 @@
     background-color: #2f931d;
 }
 
-form {
+.consoleTitle {
+    margin-left: auto;
+    font-size: 12px;
+    letter-spacing: .1em;
+    color: var(--text-muted);
+}
+
+.form {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
-    gap: 1rem;
-    background-color: #1c1b1d;
-    color: white;
-    height: 100%;
+    gap: var(--space-3);
+    padding: var(--space-4) var(--space-3);
+    background-color: var(--bg-card-project);
+    color: var(--text-title);
 }
 
-form h3 {
-    font-size: 13px;
-    margin-bottom: 1rem;
+.heading h3 {
+    font-size: clamp(1rem, 3vw, 1.5rem);
 }
 
-form input {
-    color: white;
-    padding: 1rem;
-    background-color: transparent;
-    border: 2px solid #272c2e;
-    margin-bottom: 1rem;
+.ready {
+    font-size: 14px;
+    color: var(--text-secondary);
 }
 
-form textarea {
-    color: white;
-    background-color: transparent;
-    border: 2px solid #272c2e;
-    padding: .5rem;
-    height: 150px;
+.cursor {
+    animation: blink 1s steps(2, start) infinite;
 }
 
-form .btnSend {
+.row {
+    display: grid;
+    gap: var(--space-3);
+}
+
+.field {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: .5rem;
-    background-color: #34fc0d;
-    height: 50px;
-    border: none;
-    font-size: 15px;
+    flex-direction: column;
+    gap: var(--space-1);
 }
 
-.btnSend:hover {
-    cursor: pointer;
-    transform: scale(1.03);
-    transition: transform 0.2s ease;
+.field span {
+    font-size: 13px;
+    letter-spacing: .08em;
+    color: var(--text-muted);
+}
 
+.field input,
+.field textarea {
+    width: 100%;
+    padding: .9rem 1rem;
+    color: var(--text-title);
+    background-color: transparent;
+    border: 2px solid var(--bg-input-border);
+    transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.field textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+    color: var(--text-primary);
+}
+
+.field input:focus,
+.field textarea:focus {
+    outline: none;
+    border-color: var(--bg-secondary);
+    box-shadow: var(--glow-soft);
+}
+
+.field:focus-within span {
+    color: var(--text-secondary);
+}
+
+.btnSend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-1);
+    min-height: 52px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: .05em;
+    color: #000;
+    background-color: var(--accent-success);
+    border: none;
+    cursor: pointer;
+    transition: transform var(--transition), box-shadow var(--transition), opacity var(--transition);
+}
+
+.btnSend:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(52, 252, 13, 0.5);
+}
+
+.btnSend:disabled {
+    opacity: .6;
+    cursor: progress;
 }
 
 .btnSend svg {
-    width: 25px;
-    height: 25px;
+    width: 22px;
+    height: 22px;
 }
 
-/* Media Query for Desktop */
-@media(min-width: 768px) {
+.feedback {
+    min-height: 1.5em;
+    font-size: 14px;
+    color: var(--accent-success);
+}
+
+.feedbackError {
+    color: var(--accent-error);
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 768px) {
     .container {
-        justify-content: center;
-        align-items: center;
-        height: 25%;
-        scroll-margin-top: 65px;
+        padding: var(--space-6) var(--space-4);
     }
 
-    .console {
-        width: 90%;
+    .form {
+        padding: var(--space-5);
     }
 
-    .rodTop h4 {
-        width: 80%;
-        text-align: center;
+    .row {
+        grid-template-columns: 1fr 1fr;
     }
 
-    form h3 {
-        font-size: 25px;
-    }
-
-    form label {
+    .btnSend {
         font-size: 18px;
-    }
-
-    form .btnSend {
-        font-size: 20px;
-        font-weight: bold;
-        margin-top: 1rem;
-    }
-}
-
-@media(min-width: 1440px) {
-    .console {
-        width: 70%;
     }
 }

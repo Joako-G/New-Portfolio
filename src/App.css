@@ -1,33 +1,20 @@
 .main {
     display: flex;
     width: 100%;
-    justify-content: center;
 }
 
 .sidebar {
-    width: 0%;
+    display: none;
 }
 
 .content {
-    width: 100%;
+    flex: 1;
+    min-width: 0;
 }
 
 @media(min-width: 1024px) {
     .sidebar {
-        width: 5%;
-    }
-
-    .content {
-        width: 95%;
-    }
-}
-
-@media(min-width: 1440px) {
-    .sidebar{
-        width: 3%;
-    }
-
-    .content {
-        width: 97%;
+        display: block;
+        flex: 0 0 64px;
     }
 }
