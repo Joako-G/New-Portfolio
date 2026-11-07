@@ -29,6 +29,23 @@
             "status": "Complete",
             "gitUrl": "https://github.com/Joako-G/pokemonGame",
             "webUrl": "https://joako-g.github.io/pokemonGame/"
+        }, {
+            "id": 3,
+            "image": "margaritas.png",
+            "title": "MARRGARITAS_ARTE_&_DECO",
+            "description": "Sitio web desarrollado para una empresa de decoración y arte, con el objetivo de mostrar sus productos. Incluye secciones de galería, información de contacto y detalles sobre la empresa. Aplicacion desarrollada con React, CSS y HTML para el Frontend, Node y Express para el Backend y Supabase para base de datos. La web esta enfocado en la presentación visual y la experiencia del usuario.",
+            "stacks": [
+                "REACT",
+                "CSS",
+                "HTML",
+                "TYPESCRIPT",
+                "Node",
+                "Express",
+                "Supabase"
+            ],
+            "status": "Complete",
+            "gitUrl": "https://github.com/Joako-G/New-Portfolio",
+            "webUrl": "https://margaritas-arteydeco.vercel.app"
         }
     ]
 }
