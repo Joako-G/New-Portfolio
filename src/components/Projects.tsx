@@ -10,7 +10,7 @@ export function Projects({ projects }: ProjectsProps) {
     return (
         <section id='projects' className={styles.container}>
             <div className={styles.titleSection}>
-                <h1>MISSION_LOGS</h1>
+                <h2>MISSION_LOGS</h2>
                 <div className={styles.border} />
             </div>
             <div className={styles.cards}>

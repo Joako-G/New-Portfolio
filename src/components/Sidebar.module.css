@@ -1,22 +1,60 @@
 .container {
-    position: fixed;
-    left: 1;
+    position: sticky;
+    top: var(--header-height);
     display: flex;
-    justify-content: center;
-    height: 100%;
-    width: 0%;
-    padding-top: 1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+    height: calc(100vh - var(--header-height));
+    padding: var(--space-3) 0;
     background-color: var(--bg-sidebar);
+    border-right: var(--border-subtle);
 }
 
-@media(min-width: 1024px) {
-    .container {
-        width: 5%;
-    }
+.logo {
+    width: 28px;
+    height: 28px;
 }
 
-@media(min-width: 1440px) {
-    .container {
-        width: 3%;
-    }
+.line {
+    width: 1px;
+    flex: 1;
+    background: linear-gradient(to bottom, var(--bg-secondary), transparent);
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid transparent;
+    transition: border-color var(--transition), box-shadow var(--transition), background-color var(--transition);
+}
+
+.links a:hover {
+    border-color: var(--border-link);
+    background-color: var(--bg-transparente);
+    box-shadow: var(--glow-soft);
+}
+
+.links svg {
+    width: 22px;
+    height: 22px;
+}
+
+.links svg path {
+    fill: none;
+    stroke: var(--text-secondary);
+}
+
+.links a:first-child svg path {
+    fill: var(--text-secondary);
+    stroke: none;
 }

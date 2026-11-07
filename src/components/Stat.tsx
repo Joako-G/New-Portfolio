@@ -7,13 +7,13 @@ interface StatProps {
 
 export function Stat({ stat }: StatProps) {
     return (
-        <div className={`${styles.card} ${styles[`card${stat.id}`]}`}>
-            <h4>{stat.title}</h4>
+        <article className={`${styles.card} ${styles[`card${stat.id}`] ?? ''}`}>
+            <h3>{stat.title}</h3>
             <div className={styles.value}>
-                <h2>{stat.value}</h2>
+                <strong>{stat.value}</strong>
                 <span>{stat.label}</span>
             </div>
             <p>{stat.description}</p>
-        </div>
+        </article>
     )
 }

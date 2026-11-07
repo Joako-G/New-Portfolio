@@ -1,140 +1,147 @@
-@import '../index.css';
-
-/* Media Query for phone */
+/* Mobile first */
 .container {
+    width: 100%;
+    padding: var(--space-5) var(--space-2);
+    background-color: var(--bg-section);
+    color: var(--text-title);
+}
+
+.inner {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: var(--space-4);
     width: 100%;
-    background-color: #0e0e10;
-    padding: 2rem;
-    color: white;
-    scroll-margin-top: 110px;
+    max-width: var(--content-max);
+    margin: 0 auto;
 }
 
 .info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 2rem;
+    gap: var(--space-3);
 }
 
-.info p {
-    color: grey;
+.title {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.description {
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 520px;
 }
 
 .label {
-    display: flex;
+    display: inline-flex;
+    align-self: flex-start;
     align-items: center;
-    gap: 1rem;
-    padding: .5rem;
-    width: 70%;
-    background-color: #2a2a2c;
+    gap: var(--space-2);
+    padding: .5rem 1rem;
+    font-size: 14px;
+    letter-spacing: .08em;
+    background-color: var(--bg-panel);
 }
 
 .circle {
     width: 10px;
     height: 10px;
-    background-color: #00f2ff;
-    border: 1px solid #00f2ff;
-    box-shadow: inset 0 0 5px #00f2ff,
-        0 0 15px #00f2ff;
-    border-radius: 100%;
+    border-radius: 50%;
+    background-color: var(--bg-btn-primary);
+    box-shadow: inset 0 0 5px var(--bg-btn-primary), 0 0 15px var(--bg-btn-primary);
 }
 
 .skills {
     display: flex;
-    width: 100%;
-    background-color: var(--bg-card-project);
     flex-direction: column;
-    padding: 3rem 2rem;
-    gap: 1.5rem;
+    gap: var(--space-4);
+    width: 100%;
+    padding: var(--space-4) var(--space-3);
+    list-style: none;
+    background-color: var(--bg-card-project);
+    border: var(--border-subtle);
 }
 
 .skill {
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: .6rem;
 }
 
 .skillInfo {
     display: flex;
+    align-items: center;
+    gap: var(--space-2);
     font-size: 15px;
-    gap: 1rem;
 }
 
 .skillInfo svg {
     width: 25px;
     height: 25px;
+    flex-shrink: 0;
+}
+
+.tech {
+    font-size: 15px;
 }
 
 .value {
     margin-left: auto;
+    color: var(--skill-color);
 }
 
 .rod {
     width: 100%;
     height: 4px;
-    background-color: grey;
+    background-color: rgba(128, 128, 128, 0.35);
+    overflow: hidden;
 }
 
-.rod div {
+.rodFill {
+    width: 0;
     height: 100%;
+    background-color: var(--skill-color);
+    box-shadow: 0 0 10px var(--skill-color);
+    transition: width 1.2s cubic-bezier(.2, .8, .2, 1);
 }
 
-.rodReact {
-    width: 70%;
-    background: linear-gradient(90deg, #00f2ff, #00bcd4);
-    box-shadow: 0 0 10px #00f2ff;
+.isVisible .rodFill {
+    width: var(--skill-value);
 }
 
-.rodTs {
-    width: 60%;
-    background: linear-gradient(90deg, #3179c7, #2863a1);
-    box-shadow: 0 0 10px #3179c7;
+.skill:nth-child(2) .rodFill {
+    transition-delay: 100ms;
 }
 
-.rodZustand {
-    width: 50%;
-    background: linear-gradient(90deg, #ffe600, #ffe600);
-    box-shadow: 0 0 10px #ffe600;
+.skill:nth-child(3) .rodFill {
+    transition-delay: 200ms;
 }
 
-.rodApi {
-    width: 60%;
-    background: linear-gradient(90deg, #00ff00, #00cf00);
-    box-shadow: 0 0 10px #00ff00;
+.skill:nth-child(4) .rodFill {
+    transition-delay: 300ms;
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
     .container {
-        height: 17%;
-        align-items: center;
-        justify-content: center;
-        scroll-margin-top: 70px;
-    }
-
-    .label {
-        width: 35%;
-    }
-
-}
-
-@media(min-width: 1024px) {
-    .label {
-        width: 25%;
-    }
-}
-
-@media(min-width: 1440px) {
-    .container {
-        flex-direction: row;
-        padding: 5rem;
+        padding: var(--space-6) var(--space-4);
     }
 
     .skills {
-        justify-content: center;
-        gap: 2rem;
-        height: 80%;
+        padding: var(--space-5) var(--space-4);
+    }
+}
+
+@media (min-width: 1024px) {
+    .inner {
+        flex-direction: row;
+        align-items: center;
+        gap: var(--space-6);
+    }
+
+    .info {
+        flex: 1;
+    }
+
+    .skills {
+        flex: 1.2;
     }
 }

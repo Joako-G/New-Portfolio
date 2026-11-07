@@ -10,19 +10,46 @@
   --bg-btn-primary: #00f2ff;
   --bg-card: #353437;
   --bg-card-project: #1c1b1d;
+  --bg-section: #0e0e10;
+  --bg-section-alt: #131315;
+  --bg-panel: #2a2a2c;
+  --bg-input-border: #272c2e;
 
   --text-title: #ffffff;
   --text-primary: #655C5C;
   --text-secondary: #00A0A9;
   --text-hover: #00A0A9;
   --text-btn-secondary: #ff007f;
+  --text-muted: #8b8b8b;
+  --text-body: #d6d6d6;
 
   --shadow-hover: #00A0A9;
   --shadow: #00f2ff;
+  --glow-soft: 0 0 12px rgba(0, 160, 169, 0.45);
+  --glow-strong: 0 0 10px rgba(0, 160, 169, 0.6), 0 0 30px rgba(0, 160, 169, 0.4);
+
+  --accent-green: #2AE500;
+  --accent-success: #34fc0d;
+  --accent-ts: #3179c7;
+  --accent-zustand: #ffe600;
+  --accent-api: #00ff00;
+  --accent-error: #ff4d6d;
 
   --border: 1px solid var(--bg-secondary);
   --border-link: #00A0A9;
   --bg-span: #353437;
+  --border-subtle: 1px solid rgba(139, 139, 139, 0.25);
+
+  --space-1: .5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: 5rem;
+
+  --header-height: 70px;
+  --transition: 200ms ease;
+  --content-max: 1280px;
 }
 
 * {
@@ -31,23 +58,72 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: var(--bg-body);
   color: var(--text-primary);
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 400;
+  line-height: 1.5;
   background-color: var(--bg-content);
   background-image: repeating-linear-gradient(to bottom,
       #1f1f1f 0px,
       #1f1f1f 1px,
       transparent 2px,
       transparent 4px);
+  -webkit-font-smoothing: antialiased;
 }
 
 @supports (font-variation-settings: normal) {
   body {
-    font-family: 'Space Grotesk';
+    font-family: 'Space Grotesk', sans-serif;
     font-variation-settings: 'wght' 600;
-    /* Usa el valor variable */
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+section {
+  scroll-margin-top: 110px;
+}
+
+@media (min-width: 768px) {
+  section {
+    scroll-margin-top: var(--header-height);
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--bg-btn-primary);
+  outline-offset: 3px;
+}
+
+::selection {
+  background-color: var(--bg-secondary);
+  color: var(--text-title);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

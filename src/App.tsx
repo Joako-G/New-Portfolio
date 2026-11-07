@@ -12,18 +12,19 @@ import { Skills } from './components/Skills'
 import { Contact } from './components/Contact'
 import emailjs from '@emailjs/browser'
 
-function App() {
-  const stats = data.stats as IStat[]
-  const projects = dataProjects.projects as IProject[]
-  emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
+emailjs.init({ publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY })
 
+const stats = data.stats as IStat[]
+const projects = dataProjects.projects as IProject[]
+
+function App() {
   return (
     <>
       <Header />
       <main className='main'>
-        <div className='sidebar'>
+        <aside className='sidebar'>
           <Sidebar />
-        </div>
+        </aside>
         <div className='content'>
           <AboutMe />
           <Stats stats={stats} />
@@ -31,7 +32,6 @@ function App() {
           <Skills />
           <Contact />
         </div>
-
       </main>
     </>
   )
